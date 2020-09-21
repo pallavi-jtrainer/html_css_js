@@ -184,3 +184,32 @@ section{
     margin-left: 15px;
 }
 
+aside input[type="text"],aside input[type="email"]{
+	color:#000;
+	margin-bottom:5px;
+}
+
+.developer{
+	width:170px;
+	float:right;
+}
+
+.developer ul{
+	margin-bottom:10px;
+	list-style:none;
+	padding:0;
+}
+
+.developer li{
+	list-style:none;
+	line-height:1.7em;
+}
+
+table.dev-table,table.dev-table tr,table.dev-table td,table.dev-table th{
+	font-size:110%;
+}
+
+.dev-table tr,table.dev-table td{
+	border-bottom: 1px dashed #000000;
+}
+
