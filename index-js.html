@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript Demo</title>
+        <script type="text/javascript">
+            function clickTest(){
+                var n1 = parseInt(document.getElementById('n1').value);
+                var n2 = parseInt(document.getElementById('n2').value);
+
+                //console.log(n1 + n2);
+
+                document.getElementById('result').innerHTML = '<p>Result: ' + (n1+n2) + '</p>';
+            }
+
+
+            function greeting(){
+                // let name = prompt("Enter a name:");
+                // let msg = 'Welcome';
+                // alert(`${msg}`+ " " + `${name}`);
+
+                let message = "split() in JavaScript is similar to String tokenizer in Java";
+                let tokens = message.split(' ');
+                console.log(tokens);
+
+            }
+
+            function ArrayDemo(){
+                // var arr = new Array(3, 4, 5, 2, 6);
+                // var arr1 = [2, 4, 's', 7.6, 'red'];
+
+                // arr1.push(10);
+
+                // arr1.forEach(function(e){
+                //     console.log(e);
+                // });
+                // // for(var i = 0; i < arr1.length; i++){
+                // //     console.log(arr1[i]);
+                // // }
+
+                // //console.log(arr1);
+
+                var books = [
+                    ['Pride and Prejudice', 'Jane Austen'],
+                    ['Origin', 'Dan Brown'],
+                    ['The Surgeon', 'Tess Gerritsen'],
+                    ['As You Like It', 'William Shakepear'],
+                    ['Montana Sky', 'Nora Roberts'],
+                    ['Mrs. Miracle', 'Debbie Macomber'],
+                    ['Toxin', 'Robin Cook']
+                ];
+
+              //  console.log(books);
+              console.table(books);
+
+              books.push(['Carrie', 'Stephen King']);
+
+              console.table(books);
+
+
+            }
+
+            function prgFlow(){
+                var n1 = parseInt(document.getElementById('n1').value);
+                // while(n1 > 0 && n1 < 11){
+                //     n1 = n1 + 2;
+                //     console.log(n1);
+                // }
+
+                // do{
+
+                // }while();
+
+                //for(initialization; condition; post-increment){}
+
+                // for(var counter=1; counter<6; counter++){
+                //     console.log("inside loop: " + counter);
+                // }
+
+                // console.log('outside loop: ' + counter);
+                
+                // if(n1 > 0 && n1 < 8){
+                //     var dayname;
+                //     switch(n1){
+                //         case 1: dayname="Sunday";
+                //             break;
+                //         case 2: dayname="Monday";
+                //             break;
+                //         case 3: dayname="Tuesday";
+                //             break;
+                //         case 4: dayname="Wednesday";
+                //             break;
+                //         case 5: dayname="Thursday";
+                //             break;
+                //         case 6: dayname="Friday";
+                //             break;
+                //         case 7: dayname="Saturday";
+                //             break;
+                //     }
+
+                //     document.getElementById('result').innerHTML = dayname;
+                // }else{
+                //     alert('Number should be between 1 and 7');
+                // }
+            }
+
+
+            // let show = function(){
+            //     console.log("Anonymous function");
+            // }
+
+            let show = () => console.log("Anonymous function");
+
+
+            let person = {
+                firstname: 'John',
+                lastname: 'Doe'
+            };
+
+            // console.log(person.firstname);
+            // console.log(person[lastname]);
+
+            (function(){
+                console.log(`${person.firstname} ${person.lastname}`);
+            })(person);
+
+
+        </script>
+    </head>
+    <body>
+        <!-- <input type="text" id="n1">
+        <br><br>
+        <input type="text" id="n2">
+        <br><br> -->
+        <button onclick="greeting()">Greet</button>
+
+        <br><br>
+        <button onclick = "ArrayDemo()">Arrays</button>
+        
+        <br><br>
+        <button onclick="show()">Show</button>
+        
+        <div id="result"></div>
+
+
+        <script type="text/javascript">
+            // document.getElementById('result').innerHTML="Welcome to JavaScript";
+            // //console.log("Welcome To JavaScript");
+
+           // document.write("Welcome to JavaScript");
+        </script>
+    </body>
+</html>

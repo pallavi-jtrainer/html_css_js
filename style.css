@@ -9,8 +9,8 @@ body{
     text-align: left;
     font-size: 13px;
     font-family: Arial, Helvetica, sans-serif;
-    color: #000000;
-    background-color:#bbc3d4;
+    color:black;
+    background-color: black;
 }
 
 a{
@@ -63,7 +63,7 @@ label{
 #container{
     width:960px;
     overflow:auto;
-    margin-left: 80px;
+    margin-left: 400px;
 }
 
 header{
@@ -80,16 +80,23 @@ header h1{
 
 header h2{
     float: right;
-    color: darkblue;
+    color: rgb(79, 79, 187);
     padding:40px 20px 0 0;
 }
 
 .spanclass{
-    color: #032353;
+    color: #2a79f0;
 }
 
 .whitetext{
     color: white;
+}
+
+#displayname{
+    margin-left: 480px;
+    font-size: 22px;
+    color: darkorange;
+    font-weight: 800;
 }
 
 nav#menu{

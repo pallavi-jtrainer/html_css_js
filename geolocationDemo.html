@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Geolocation Demo</title>
+        <script>
+            function showPosition(){
+                if(navigator.geolocation){
+                    navigator.geolocation.getCurrentPosition(function(position){
+                        var curPos = "Your current location is (Latitude: " +
+                            position.coords.latitude + ", Longitude: " +
+                            position.coords.longitude + ")";
+                        document.getElementById('position').innerHTML = 
+                            '<p>' + curPos + '</p>';
+                    });
+                }else{
+                    alert("Your browser does not support HMTL5 Geolocation");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div id="position"></div>
+        <button onclick="showPosition()">Show Position</button>
+    </body>
+
+</html>
+
+
+
+<!--
+    navigator.geolocation
+
+    getCurrentPosition
+    watchPosition()
+    clearPosition()
+
+-->

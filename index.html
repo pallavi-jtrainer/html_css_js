@@ -3,11 +3,39 @@
 	<head>
 		<link rel="stylesheet" href="style.css" type="text/css">
 		<title>SpringPeople Developer Directory</title>
+		<script type="text/javascript">
+			function initStorage(){
+				function storeName(){
+					var name = document.getElementById('name').value;
+					localStorage.setItem('name', name);
+				}
+				
+				function storeEmail(){
+					var email = document.getElementById('email').value;
+					localStorage.setItem('email', email);
+				}
+
+				storeName();
+				storeEmail();
+				
+			}
+
+			function displayName(){
+				if(localStorage.getItem('name') != null){
+					document.write("Welcome " + localStorage.getItem('name'));
+				}
+			}
+
+			function clearAll(){
+				localStorage.clear();
+				window.location.reload();
+			}
+		</script>
 	</head>
 	<body>
 		<div id="container">
 			<header>
-				<h1><span class="spanclass">SpringPeople</span> Developer Directory</h1>
+				<h1><span class="spanclass">SpringPeople </span> Developer Directory</h1>
 				<h2>Find A Developer <span class="whitetext">NOW</span></h2>
 			</header>
 			
@@ -19,8 +47,12 @@
 					<li class="menuitem"><a href="register.html">Register As Developer</a></li>
 					<li class="menuitem"><a href="contact.html">Contact Us</a></li>
 				</ul>
+				<div id="displayname">
+					<script>
+						displayName();
+					</script>
+				</div>
 			</nav>
-			
 			<aside>
 				<nav id="leftmenu">
 				<h3>Links</h3>
@@ -39,11 +71,11 @@
 					<div>
 						<br><br>
 						<h3>Newsletter</h3>
-						<form id="news">
+						<form id="news"onsubmit="initStorage()">
 							Name: <input type="text" id="name" name="name">
 							Email: <input type="email" id="email" name="email">
-							<input type="submit" value="Send">
-							<a href="#">Clear</a>
+							<input type="submit" value="Submit">
+							<a href="#" onclick="clearAll()">Clear</a>
 						</form>
 					</div>
 				</nav>
